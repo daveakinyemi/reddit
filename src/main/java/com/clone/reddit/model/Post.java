@@ -54,4 +54,11 @@ public class Post {
     public int hashCode() {
         return 949848249;
     }
+
+    public Integer getVoteCount() {
+        if (this.voteCount == null) {
+            return 0;
+        }
+        return this.voteCount;
+    }
 }
