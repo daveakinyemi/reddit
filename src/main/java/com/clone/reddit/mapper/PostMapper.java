@@ -50,5 +50,3 @@ public interface PostMapper {
     @Mapping(target = "userName", source = "user.username")
     PostResponse mapToDto(Post post);
 }
-
-/*1:10:55*/
