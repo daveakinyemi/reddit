@@ -23,14 +23,19 @@ public class Subreddit {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
+
     @NotBlank(message = "Community name is required")
     private String name;
+
     @NotBlank(message = "Description is required")
     private String description;
+
     @OneToMany(fetch = LAZY)
     @ToString.Exclude
     private List<Post> posts;
+
     private Instant createdDate;
+
     @ManyToOne(fetch = LAZY)
     @ToString.Exclude
     private User user;
